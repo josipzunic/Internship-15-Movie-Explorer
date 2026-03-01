@@ -13,7 +13,7 @@ export const Layout = ({ children }) => {
               <NavLink
                 key={route.id}
                 to={route.route}
-                className={(isActive) =>
+                className={({ isActive }) =>
                   isActive ? styles.linkActive : styles.linkInactive
                 }
               >

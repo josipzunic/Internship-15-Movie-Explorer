@@ -1,0 +1,10 @@
+.image {
+    width: 100%;
+    height: 200px;
+    aspect-ratio: 1/1;
+}
+
+.movieCard {
+    width: 10vw;
+    flex: 0 0 10vw;
+}

@@ -1,0 +1,20 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: plum;
+    padding: 1rem;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+.linkActive {
+    color: red;
+}
+
+.linkInactive {
+    color: aquamarine;
+}

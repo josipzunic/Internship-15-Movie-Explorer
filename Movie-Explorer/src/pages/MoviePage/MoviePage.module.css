@@ -1,0 +1,16 @@
+.moviePage {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    padding: 1vw 1vw 0vw 1vw;
+}
+
+.input {
+    width: 100%;
+}
+
+.movieContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1vw;
+}

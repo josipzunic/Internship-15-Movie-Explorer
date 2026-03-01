@@ -1,8 +1,9 @@
 import { useEffect } from "react";
+import { pageNames } from "../constants/pageNames";
 
 export const Home = () => {
   useEffect(() => {
-    document.title = "HOME";
+    document.title = pageNames.home;
   }, []);
 
   return (
