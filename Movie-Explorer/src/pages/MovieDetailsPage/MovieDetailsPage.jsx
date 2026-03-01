@@ -30,35 +30,41 @@ export const MovieDetailsPage = ({ favorites, setFavorites }) => {
 
   return (
     <div className={styles.container}>
-      <div>
-        <button onClick={() => navigate(-1)}>&#8592;</button>
-      </div>
-      <div className={styles.imageContainer}>
-        <img
-          className={styles.image}
-          src={movie.imageUrl}
-          alt={movie.imageAlt}
-        />
-      </div>
-      <div className={styles.information}>
-        <h2>
-          {favorites.includes(movie.id) ? (
-            <span className={styles.star}> &#9733; </span>
-          ) : null}
-          {movie.name}
-        </h2>
-        <p>{movie.year}</p>
-        <p>{movie.runtime}</p>
-        <h3>Synopsis: </h3>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque
-          deserunt delectus blanditiis magnam nam incidunt dolores explicabo
-          odio neque. Ipsum itaque fuga ad animi corrupti ut ducimus architecto
-          repellat. Laudantium.
-        </p>
-        <button onClick={handleFavorite}>
-          {favorites.includes(movie.id) ? "Unfavorite" : "Favorite"}
+      <div className={styles.arrowContainer}>
+        <button className={styles.arrow} onClick={() => navigate(-1)}>
+          &#8592; GO BACK
         </button>
+      </div>
+      <div className={styles.movieContainer}>
+        <div className={styles.imageContainer}>
+          <img
+            className={styles.image}
+            src={movie.imageUrl}
+            alt={movie.imageAlt}
+          />
+        </div>
+        <div className={styles.information}>
+          <h2>
+            {favorites.includes(movie.id) ? (
+              <span className={styles.star}> &#9733; </span>
+            ) : null}
+            {movie.name}
+          </h2>
+          <p>Year of release: {movie.year}</p>
+          <p>Runtime: {movie.runtime}</p>
+          <div>
+            <h3>Synopsis: </h3>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque
+              deserunt delectus blanditiis magnam nam incidunt dolores explicabo
+              odio neque. Ipsum itaque fuga ad animi corrupti ut ducimus
+              architecto repellat. Laudantium.
+            </p>
+          </div>
+          <button className={styles.favoriteButton} onClick={handleFavorite}>
+            {favorites.includes(movie.id) ? "Unfavorite" : "Favorite"}
+          </button>
+        </div>
       </div>
     </div>
   );

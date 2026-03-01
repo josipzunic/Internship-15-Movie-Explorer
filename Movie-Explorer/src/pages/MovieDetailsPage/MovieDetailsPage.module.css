@@ -1,21 +1,91 @@
+.container {
+  display: flex;
+  justify-content: center;
+  color: black;
+  margin-top: 3.5rem;
+}
+
 .imageContainer {
-    width: 20vw;
+  width: 20vw;
 }
 
 .image {
-    width: 100%;
+  width: 100%;
 }
 
 .container {
-    display: flex;
-    gap: 1vw;
+  display: flex;
+  gap: 1vw;
 }
 
 .information {
-    width: 20vw;
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.information h2 {
+  font-size: 2rem;
+  margin: 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.3rem;
+}
+
+.information p {
+  margin: 0;
+  color: #444;
+  font-size: 0.95rem;
+}
+
+.information h3 {
+  margin: 0.5rem 0 0.2rem 0;
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+}
+
+.favoriteButton {
+  align-self: flex-start;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 20px;
+  border: 2px solid black;
+  background: none;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.favoriteButton:hover {
+  background: black;
+  color: white;
 }
 
 .star {
-    vertical-align: middle;
-    color: gold;
+  vertical-align: middle;
+  color: gold;
+}
+
+.movieContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+  background-color: white;
+  width: 80vw;
+  height: 70vh;
+  border-radius: 20px;
+}
+
+.arrowContainer {
+  margin-right: 1rem;
+}
+
+.arrow {
+  background-color: black;
+  color: white;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
 }
