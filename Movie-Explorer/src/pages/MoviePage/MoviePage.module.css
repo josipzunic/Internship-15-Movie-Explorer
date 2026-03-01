@@ -22,9 +22,8 @@
 }
 
 .movieContainer {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 1.5vw;
 }
 

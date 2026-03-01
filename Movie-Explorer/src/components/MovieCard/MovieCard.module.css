@@ -5,8 +5,7 @@
 }
 
 .movieCard {
-  width: 15vw;
-  flex: 0 0 10vw;
+  width: 100%;
   cursor: pointer;
   transition: scale 0.1s ease-in;
 }
