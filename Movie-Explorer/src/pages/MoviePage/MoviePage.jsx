@@ -83,15 +83,23 @@ export const MoviePage = ({ favorites }) => {
               placeholder="Search movies..."
               onChange={(e) => handleSearch(e)}
             />
-            <select name="sorting" onChange={(e) => handleSort(e)}>
+            <select
+              className={styles.select}
+              name="sorting"
+              onChange={(e) => handleSort(e)}
+            >
               <option value="az">A-Z</option>
               <option value="za">Z-A</option>
               <option value="year">Year</option>
             </select>
           </div>
           <div className={styles.movieContainer}>
-            {displayedMovies.map((movie) => {
-              return (
+            {displayedMovies.length === 0 ? (
+              <p className={styles.emptyMessage}>
+                No movies found for this query.
+              </p>
+            ) : (
+              displayedMovies.map((movie) => (
                 <Link
                   key={movie.id}
                   className={styles.link}
@@ -100,10 +108,10 @@ export const MoviePage = ({ favorites }) => {
                   <MovieCard
                     movieObject={movie}
                     isFavorite={favorites.includes(movie.id)}
-                  ></MovieCard>
+                  />
                 </Link>
-              );
-            })}
+              ))
+            )}
           </div>
         </div>
       ) : null}

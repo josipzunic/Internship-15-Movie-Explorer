@@ -1,26 +1,47 @@
 .moviePage {
-    display: flex;
-    flex-direction: column;
-    gap: 2vh;
-    padding: 1vw 1vw 0vw 1vw;
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+  padding: 1vw 1vw 0vw 1vw;
 }
 
 .inputs {
-    display: flex;
-    gap: 1vw;
+  display: flex;
+  gap: 1vw;
 }
 
 .input {
-    width: 100%;
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 20px;
+  color: black;
+}
+
+.input::placeholder {
+  font-size: 1.2rem;
 }
 
 .movieContainer {
   display: flex;
   flex-wrap: wrap;
-  gap: 1vw;
+  align-items: center;
+  gap: 1.5vw;
 }
 
 .link {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
+}
+
+.select {
+  width: 5rem;
+  border-radius: 20px;
+  text-align: center;
+  background-color: white;
+}
+
+.emptyMessage {
+  color: white;
+  font-size: 1.2rem;
+  padding: 2rem;
 }
