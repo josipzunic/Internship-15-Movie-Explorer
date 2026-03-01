@@ -9,7 +9,8 @@ export const Layout = ({ children }) => {
         <h1>MOVIE EXPLORER</h1>
         <nav>
           {routes.map((route) => {
-            return route.route === routes[3].route ? null : (
+            return route.route === routes[3].route ||
+              route.route === routes[4].route ? null : (
               <NavLink
                 key={route.id}
                 to={route.route}

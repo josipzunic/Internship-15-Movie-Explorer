@@ -4,6 +4,7 @@ import { Layout } from "./components/Layout/Layout";
 import { Home } from "./pages/Home";
 import { MoviePage } from "./pages/MoviePage/MoviePage";
 import { MovieDetailsPage } from "./pages/MovieDetailsPage/MovieDetailsPage";
+import { PageNotFoundPage } from "./pages/PageNotFoundPage/PageNotFoundPage";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path={routes[1].route} element={<MoviePage />} />
         {/* <Route path={routes[2].route} element={<Favorites />} /> */}
         <Route path={routes[3].route} element={<MovieDetailsPage />} />
+        <Route path={routes[4].route} element={<PageNotFoundPage />} />
       </Routes>
     </Layout>
   );

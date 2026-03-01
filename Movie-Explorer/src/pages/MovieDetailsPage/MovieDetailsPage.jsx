@@ -1,9 +1,9 @@
-import { useMemo } from "react";
+import { useMemo, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { movies } from "../../data/movies";
 import styles from "./MovieDetailsPage.module.css";
 import { useNavigate } from "react-router-dom";
-
+import { routes } from "../../constants/routes";
 
 export const MovieDetailsPage = () => {
   const params = useParams();
@@ -13,6 +13,12 @@ export const MovieDetailsPage = () => {
     () => movies.find((movie) => movie.id === Number(params.id)),
     [params.id],
   );
+
+  useEffect(() => {
+    if (!movie) navigate(routes[4].route);
+  }, [movie, navigate]);
+
+  if (!movie) return null;
 
   return (
     <div className={styles.container}>
@@ -40,9 +46,7 @@ export const MovieDetailsPage = () => {
           odio neque. Ipsum itaque fuga ad animi corrupti ut ducimus architecto
           repellat. Laudantium.
         </p>
-        <button>
-          {movie.isFavorite ? "Unfavorite" : "Favorite"}
-        </button>
+        <button>{movie.isFavorite ? "Unfavorite" : "Favorite"}</button>
       </div>
     </div>
   );
