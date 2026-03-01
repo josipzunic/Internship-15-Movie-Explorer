@@ -8,6 +8,7 @@ import { PageNotFoundPage } from "./pages/PageNotFoundPage/PageNotFoundPage";
 import { useLocalStorage } from "./hooks/useLocalStorage";
 import { FavoritesPage } from "./pages/FavoritesPage/FavoritesPage";
 import { movies } from "./data/movies";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 
 function App() {
   const defaultFavorites = movies
@@ -20,6 +21,7 @@ function App() {
 
   return (
     <Layout>
+      <ScrollToTop />
       <Routes>
         <Route path={routes[0].route} element={<Home />} />
         <Route path={routes[1].route} element={<MoviePage favorites={favorites}/>} />

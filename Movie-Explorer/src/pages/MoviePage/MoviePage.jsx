@@ -14,6 +14,7 @@ import { routes } from "../../constants/routes";
 
 export const MoviePage = ({ favorites }) => {
   const searchRef = useRef(null);
+  const debounceRef = useRef(null);
   const [movies, setMovies] = useState([]);
   const [isLoaded, setIsLoaded] = useState(false);
   const [searchText, setSearchText] = useState("");
@@ -58,7 +59,11 @@ export const MoviePage = ({ favorites }) => {
 
   const handleSearch = (e) => {
     const newSearchText = e.target.value;
-    setSearchText(newSearchText);
+
+    clearTimeout(debounceRef.current);
+    debounceRef.current = setTimeout(() => {
+      setSearchText(newSearchText);
+    }, 300);
   };
 
   const handleSort = (e) => {
