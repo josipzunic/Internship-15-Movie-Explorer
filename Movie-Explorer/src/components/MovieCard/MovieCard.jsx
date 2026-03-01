@@ -19,7 +19,7 @@ export const MovieCard = ({ movieObject, isFavorite }) => {
         </h2>
         <p className={styles.paragraph}>
           {" "}
-          {movieObject.year} | {movieObject.runtime}
+          {movieObject.year} | {movieObject.runtime} | {movieObject.rating}/10
         </p>
       </div>
     </div>

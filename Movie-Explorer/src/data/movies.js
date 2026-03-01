@@ -6,7 +6,9 @@ export const movies = [
     imageAlt: "The Devil Wears Prada movie poster",
     year: "2006",
     runtime: "1h 49m",
+    rating: 6.9,
     isFavorite: false,
+    synopsis: "Andrea Sachs, an aspiring journalist, lands a job as assistant to Miranda Priestly, the ruthless editor-in-chief of Runway magazine. Swept into the cutthroat world of fashion, Andy must choose between her ambitions and her integrity.",
   },
   {
     id: 2,
@@ -15,17 +17,20 @@ export const movies = [
     imageAlt: "Star Wars: Episode III - Revenge of the Sith movie poster",
     year: "2005",
     runtime: "2h 20m",
+    rating: 7.6,
     isFavorite: true,
+    synopsis: "Anakin Skywalker is seduced by the dark side and transforms into Darth Vader as Palpatine executes Order 66, decimating the Jedi Order and turning the Republic into the Galactic Empire.",
   },
   {
     id: 3,
     name: "Pirates of the Caribbean: The Curse of the Black Pearl",
     imageUrl: "../../public/assets/cobp.jpg",
-    imageAlt:
-      "Pirates of the Caribbean: The Curse of the Black Pearl movie poster",
+    imageAlt: "Pirates of the Caribbean: The Curse of the Black Pearl movie poster",
     year: "2003",
     runtime: "2h 23m",
+    rating: 8.1,
     isFavorite: true,
+    synopsis: "Roguish pirate Jack Sparrow teams up with blacksmith Will Turner to rescue Elizabeth Swann from the cursed crew of the Black Pearl, who are doomed to sail the seas as the undead.",
   },
   {
     id: 4,
@@ -34,7 +39,9 @@ export const movies = [
     imageAlt: "Interstellar movie poster",
     year: "2014",
     runtime: "2h 49m",
+    rating: 8.7,
     isFavorite: false,
+    synopsis: "With Earth dying, a former NASA pilot leads a crew through a wormhole near Saturn in search of a new home for humanity, confronting the extremes of space, time, and love.",
   },
   {
     id: 5,
@@ -43,7 +50,9 @@ export const movies = [
     imageAlt: "Oppenheimer movie poster",
     year: "2023",
     runtime: "3h",
+    rating: 8.3,
     isFavorite: false,
+    synopsis: "The story of J. Robert Oppenheimer, the theoretical physicist who led the Manhattan Project to develop the atomic bomb during World War II, and the moral reckoning that followed.",
   },
   {
     id: 6,
@@ -52,7 +61,9 @@ export const movies = [
     imageAlt: "Spider-Man: Into the Spider-Verse movie poster",
     year: "2018",
     runtime: "1h 57m",
+    rating: 8.4,
     isFavorite: false,
+    synopsis: "Brooklyn teen Miles Morales becomes Spider-Man and teams up with Spider-People from parallel dimensions to stop a collider that threatens to destroy the multiverse.",
   },
   {
     id: 7,
@@ -61,7 +72,9 @@ export const movies = [
     imageAlt: "Jurassic Park movie poster",
     year: "1993",
     runtime: "2h 7m",
+    rating: 8.2,
     isFavorite: false,
+    synopsis: "A billionaire opens a theme park populated with cloned dinosaurs, but when the security systems fail, a small group of visitors must fight to survive as the prehistoric predators run loose.",
   },
   {
     id: 8,
@@ -70,7 +83,9 @@ export const movies = [
     imageAlt: "Finding Nemo movie poster",
     year: "2003",
     runtime: "1h 40m",
+    rating: 8.2,
     isFavorite: false,
+    synopsis: "An overprotective clownfish named Marlin crosses the entire ocean alongside a forgetful fish named Dory to rescue his son Nemo, who was taken by a scuba diver to a Sydney dentist's aquarium.",
   },
   {
     id: 9,
@@ -79,7 +94,9 @@ export const movies = [
     imageAlt: "Mean Girls movie poster",
     year: "2004",
     runtime: "1h 37m",
+    rating: 7.1,
     isFavorite: false,
+    synopsis: "Homeschooled teenager Cady Heron infiltrates the most popular clique at her new high school, but the deeper she goes, the more she risks losing herself to the toxic social games she set out to expose.",
   },
   {
     id: 10,
@@ -88,7 +105,9 @@ export const movies = [
     imageAlt: "Camp Rock movie poster",
     year: "2008",
     runtime: "1h 34m",
+    rating: 6.0,
     isFavorite: false,
+    synopsis: "A talented but financially struggling girl lands a spot at a prestigious music camp, where she must find her voice and confidence while navigating friendship, rivalry, and a budding romance.",
   },
   {
     id: 11,
@@ -97,7 +116,9 @@ export const movies = [
     imageAlt: "Toy Story 3 movie poster",
     year: "2010",
     runtime: "1h 43m",
+    rating: 8.3,
     isFavorite: false,
+    synopsis: "As Andy prepares to leave for college, Woody, Buzz, and the gang are accidentally donated to a daycare center where a seemingly friendly teddy bear rules with an iron fist.",
   },
   {
     id: 12,
@@ -106,7 +127,9 @@ export const movies = [
     imageAlt: "Spider-Man: No Way Home movie poster",
     year: "2021",
     runtime: "2h 28m",
+    rating: 8.2,
     isFavorite: false,
+    synopsis: "After his identity is exposed, Peter Parker asks Doctor Strange to make the world forget he is Spider-Man, but the spell goes wrong and tears open the multiverse, unleashing villains from other dimensions.",
   },
   {
     id: 13,
@@ -115,7 +138,9 @@ export const movies = [
     imageAlt: "Back to the Future movie poster",
     year: "1985",
     runtime: "1h 56m",
+    rating: 8.5,
     isFavorite: false,
+    synopsis: "Teenager Marty McFly is accidentally sent back to 1955 in a time-traveling DeLorean and must ensure his parents fall in love while helping inventor Doc Brown get him back to the future.",
   },
   {
     id: 14,
@@ -124,7 +149,9 @@ export const movies = [
     imageAlt: "Space Jam movie poster",
     year: "1996",
     runtime: "1h 28m",
+    rating: 6.4,
     isFavorite: false,
+    synopsis: "The Looney Tunes recruit basketball legend Michael Jordan to help them win a high-stakes game against alien invaders who have stolen the talents of NBA superstars.",
   },
   {
     id: 15,
@@ -133,7 +160,9 @@ export const movies = [
     imageAlt: "Scooby-Doo in Where's My Mummy? movie poster",
     year: "2005",
     runtime: "1h 15m",
+    rating: 6.4,
     isFavorite: true,
+    synopsis: "Scooby-Doo and the gang travel to Egypt to visit Velma on an archaeological dig, but the trip takes a spooky turn when the curse of Cleopatra is unleashed and their friends begin disappearing.",
   },
   {
     id: 16,
@@ -142,7 +171,9 @@ export const movies = [
     imageAlt: "The Hunger Games movie poster",
     year: "2012",
     runtime: "2h 22m",
+    rating: 7.2,
     isFavorite: false,
+    synopsis: "In a dystopian future, teenager Katniss Everdeen volunteers to take her sister's place in a televised death match where children from each district must fight to the death for the Capitol's entertainment.",
   },
   {
     id: 17,
@@ -151,7 +182,9 @@ export const movies = [
     imageAlt: "The Pink Panther movie poster",
     year: "2006",
     runtime: "1h 33m",
+    rating: 6.3,
     isFavorite: false,
+    synopsis: "The bumbling Inspector Clouseau is assigned to investigate the murder of a famous soccer coach and the theft of the priceless Pink Panther diamond, causing chaos at every turn.",
   },
   {
     id: 18,
@@ -160,7 +193,9 @@ export const movies = [
     imageAlt: "Johnny English movie poster",
     year: "2003",
     runtime: "1h 27m",
+    rating: 6.4,
     isFavorite: false,
+    synopsis: "Britain's most accident-prone spy, Johnny English, is thrust into action when every other agent is eliminated, tasked with recovering the Crown Jewels and stopping a villainous French businessman.",
   },
   {
     id: 19,
@@ -169,7 +204,9 @@ export const movies = [
     imageAlt: "The Lord of the Rings: The Fellowship of the Ring movie poster",
     year: "2001",
     runtime: "2h 58m",
+    rating: 8.8,
     isFavorite: false,
+    synopsis: "Young hobbit Frodo Baggins inherits a ring of immense dark power and sets out with a fellowship of companions to destroy it in the fires of Mount Doom before the Dark Lord Sauron can reclaim it.",
   },
   {
     id: 20,
@@ -178,6 +215,8 @@ export const movies = [
     imageAlt: "Harry Potter and the Sorcerer's Stone movie poster",
     year: "2001",
     runtime: "2h 32m",
+    rating: 7.6,
     isFavorite: false,
+    synopsis: "Orphan Harry Potter discovers on his eleventh birthday that he is a wizard and enrolls at Hogwarts School of Witchcraft and Wizardry, where he uncovers the truth about his past and faces his first great danger.",
   },
 ];

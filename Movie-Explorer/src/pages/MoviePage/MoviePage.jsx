@@ -8,6 +8,7 @@ import {
   sortAlphabeticallyAsc,
   sortAlphabeticallyDesc,
   sortByYear,
+  sortByRating,
 } from "./sortHelper/sortHelpers";
 import { Link } from "react-router-dom";
 import { routes } from "../../constants/routes";
@@ -52,6 +53,9 @@ export const MoviePage = ({ favorites }) => {
       case "year":
         movieArrayToReturn = sortByYear(movieArrayToReturn);
         break;
+      case "rating":
+        movieArrayToReturn = sortByRating(movieArrayToReturn);
+        break;
     }
 
     return movieArrayToReturn;
@@ -91,6 +95,7 @@ export const MoviePage = ({ favorites }) => {
               <option value="az">A-Z</option>
               <option value="za">Z-A</option>
               <option value="year">Year</option>
+              <option value="rating">Rating</option>
             </select>
           </div>
           <div className={styles.movieContainer}>

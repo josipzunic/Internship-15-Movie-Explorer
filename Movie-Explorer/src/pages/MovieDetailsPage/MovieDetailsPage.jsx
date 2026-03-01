@@ -55,10 +55,7 @@ export const MovieDetailsPage = ({ favorites, setFavorites }) => {
           <div>
             <h3>Synopsis: </h3>
             <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque
-              deserunt delectus blanditiis magnam nam incidunt dolores explicabo
-              odio neque. Ipsum itaque fuga ad animi corrupti ut ducimus
-              architecto repellat. Laudantium.
+              {movie.synopsis}
             </p>
           </div>
           <button className={styles.favoriteButton} onClick={handleFavorite}>
