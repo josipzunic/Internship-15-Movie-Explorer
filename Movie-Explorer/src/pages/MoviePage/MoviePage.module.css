@@ -5,6 +5,11 @@
     padding: 1vw 1vw 0vw 1vw;
 }
 
+.inputs {
+    display: flex;
+    gap: 1vw;
+}
+
 .input {
     width: 100%;
 }

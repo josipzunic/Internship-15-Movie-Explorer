@@ -6,6 +6,7 @@ export const movies = [
     imageAlt: "The Devil Wears Prada movie poster",
     year: "2006",
     runtime: "1h 49m",
+    isFavorite: false,
   },
   {
     id: 2,
@@ -14,6 +15,7 @@ export const movies = [
     imageAlt: "Star Wars: Episode III - Revenge of the Sith movie poster",
     year: "2005",
     runtime: "2h 20m",
+    isFavorite: true,
   },
   {
     id: 3,
@@ -23,6 +25,7 @@ export const movies = [
       "Pirates of the Caribbean: The Curse of the Black Pearl movie poster",
     year: "2003",
     runtime: "2h 23m",
+    isFavorite: true,
   },
   {
     id: 4,
@@ -31,6 +34,7 @@ export const movies = [
     imageAlt: "Interstellar movie poster",
     year: "2014",
     runtime: "2h 49m",
+    isFavorite: false,
   },
   {
     id: 5,
@@ -39,6 +43,7 @@ export const movies = [
     imageAlt: "Oppenheimer movie poster",
     year: "2023",
     runtime: "3h",
+    isFavorite: false,
   },
   {
     id: 6,
@@ -47,6 +52,7 @@ export const movies = [
     imageAlt: "Spider-Man: Into the Spider-Verse movie poster",
     year: "2018",
     runtime: "1h 57m",
+    isFavorite: false,
   },
   {
     id: 7,
@@ -55,6 +61,7 @@ export const movies = [
     imageAlt: "Jurassic Park movie poster",
     year: "1993",
     runtime: "2h 7m",
+    isFavorite: false,
   },
   {
     id: 8,
@@ -63,6 +70,7 @@ export const movies = [
     imageAlt: "Finding Nemo movie poster",
     year: "2003",
     runtime: "1h 40m",
+    isFavorite: false,
   },
   {
     id: 9,
@@ -71,6 +79,7 @@ export const movies = [
     imageAlt: "Mean Girls movie poster",
     year: "2004",
     runtime: "1h 37m",
+    isFavorite: false,
   },
   {
     id: 10,
@@ -79,6 +88,7 @@ export const movies = [
     imageAlt: "Camp Rock movie poster",
     year: "2008",
     runtime: "1h 34m",
+    isFavorite: false,
   },
   {
     id: 11,
@@ -87,6 +97,7 @@ export const movies = [
     imageAlt: "Toy Story 3 movie poster",
     year: "2010",
     runtime: "1h 43m",
+    isFavorite: false,
   },
   {
     id: 12,
@@ -95,6 +106,7 @@ export const movies = [
     imageAlt: "Spider-Man: No Way Home movie poster",
     year: "2021",
     runtime: "2h 28m",
+    isFavorite: false,
   },
   {
     id: 13,
@@ -103,6 +115,7 @@ export const movies = [
     imageAlt: "Back to the Future movie poster",
     year: "1985",
     runtime: "1h 56m",
+    isFavorite: false,
   },
   {
     id: 14,
@@ -111,6 +124,7 @@ export const movies = [
     imageAlt: "Space Jam movie poster",
     year: "1996",
     runtime: "1h 28m",
+    isFavorite: false,
   },
   {
     id: 15,
@@ -119,6 +133,7 @@ export const movies = [
     imageAlt: "Scooby-Doo in Where's My Mummy? movie poster",
     year: "2005",
     runtime: "1h 15m",
+    isFavorite: true,
   },
   {
     id: 16,
@@ -127,6 +142,7 @@ export const movies = [
     imageAlt: "The Hunger Games movie poster",
     year: "2012",
     runtime: "2h 22m",
+    isFavorite: false,
   },
   {
     id: 17,
@@ -135,6 +151,7 @@ export const movies = [
     imageAlt: "The Pink Panther movie poster",
     year: "2006",
     runtime: "1h 33m",
+    isFavorite: false,
   },
   {
     id: 18,
@@ -143,6 +160,7 @@ export const movies = [
     imageAlt: "Johnny English movie poster",
     year: "2003",
     runtime: "1h 27m",
+    isFavorite: false,
   },
   {
     id: 19,
@@ -151,6 +169,7 @@ export const movies = [
     imageAlt: "The Lord of the Rings: The Fellowship of the Ring movie poster",
     year: "2001",
     runtime: "2h 58m",
+    isFavorite: false,
   },
   {
     id: 20,
@@ -159,5 +178,6 @@ export const movies = [
     imageAlt: "Harry Potter and the Sorcerer's Stone movie poster",
     year: "2001",
     runtime: "2h 32m",
+    isFavorite: false,
   },
 ];

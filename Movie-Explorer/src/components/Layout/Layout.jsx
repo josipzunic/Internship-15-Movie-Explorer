@@ -6,7 +6,7 @@ export const Layout = ({ children }) => {
   return (
     <div>
       <header>
-        <h1>HOME</h1>
+        <h1>MOVIE EXPLORER</h1>
         <nav>
           {routes.map((route) => {
             return (
