@@ -1,20 +1,40 @@
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: plum;
-    padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(204, 204, 4);
+  padding: 1rem;
+  margin: 1rem 1rem 0 1rem;
+  border-radius: 20px;
+}
+
+.title {
+  font-size: 2rem;
+  color: black;
 }
 
 nav {
-    display: flex;
-    gap: 20px;
+  display: flex;
+  gap: 20px;
+  height: 10vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+    width: 4vw;
+    margin-bottom: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
 }
 
 .linkActive {
-    color: red;
-}
-
-.linkInactive {
-    color: aquamarine;
+  border: 2px solid black;
+  border-radius: 20px;
+  padding: 0.5rem;
 }

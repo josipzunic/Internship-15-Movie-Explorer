@@ -6,8 +6,15 @@ export const Layout = ({ children }) => {
   return (
     <div>
       <header>
-        <h1>MOVIE EXPLORER</h1>
+        <h1 className={styles.title}>MOVIE EXPLORER</h1>
         <nav>
+          <div>
+            <img
+              src="../../../public/assets/video-camera.png"
+              alt="Video camera"
+              className={styles.image}
+            />
+          </div>
           {routes.map((route) => {
             return route.route === routes[3].route ||
               route.route === routes[4].route ? null : (
@@ -15,7 +22,7 @@ export const Layout = ({ children }) => {
                 key={route.id}
                 to={route.route}
                 className={({ isActive }) =>
-                  isActive ? styles.linkActive : styles.linkInactive
+                  `${styles.link} ${isActive ? styles.linkActive : styles.linkInactive}`
                 }
               >
                 {route.name}

@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import { routes } from "./constants/routes";
 import { Layout } from "./components/Layout/Layout";
-import { Home } from "./pages/Home";
+import { HomePage } from "./pages/HomePage/HomePage";
 import { MoviePage } from "./pages/MoviePage/MoviePage";
 import { MovieDetailsPage } from "./pages/MovieDetailsPage/MovieDetailsPage";
 import { PageNotFoundPage } from "./pages/PageNotFoundPage/PageNotFoundPage";
@@ -23,7 +23,7 @@ function App() {
     <Layout>
       <ScrollToTop />
       <Routes>
-        <Route path={routes[0].route} element={<Home />} />
+        <Route path={routes[0].route} element={<HomePage />} />
         <Route path={routes[1].route} element={<MoviePage favorites={favorites}/>} />
         <Route
           path={routes[2].route}
