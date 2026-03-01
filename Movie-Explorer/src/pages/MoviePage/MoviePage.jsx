@@ -4,7 +4,13 @@ import { MovieCard } from "../../components/MovieCard/MovieCard";
 import { useEffect, useMemo, useRef, useState } from "react";
 import styles from "./MoviePage.module.css";
 import { Loader } from "../../components/Loader/Loader";
-import { sortAlphabeticallyAsc, sortAlphabeticallyDesc, sortByYear } from "./sortHelper/sortHelpers";
+import {
+  sortAlphabeticallyAsc,
+  sortAlphabeticallyDesc,
+  sortByYear,
+} from "./sortHelper/sortHelpers";
+import { Link } from "react-router-dom";
+import { routes } from "../../constants/routes";
 
 export const MoviePage = () => {
   const searchRef = useRef(null);
@@ -29,13 +35,13 @@ export const MoviePage = () => {
   }, []);
 
   const displayedMovies = useMemo(() => {
-    const filteredMovies =  movies.filter((movie) =>
+    const filteredMovies = movies.filter((movie) =>
       movie.name.toLowerCase().includes(searchText.toLowerCase()),
     );
 
     let movieArrayToReturn = [...filteredMovies];
 
-    switch(sortOption) {
+    switch (sortOption) {
       case "az":
         movieArrayToReturn = sortAlphabeticallyAsc(movieArrayToReturn);
         break;
@@ -80,7 +86,11 @@ export const MoviePage = () => {
           </div>
           <div className={styles.movieContainer}>
             {displayedMovies.map((movie) => {
-              return <MovieCard key={movie.id} movieObject={movie}></MovieCard>;
+              return (
+                <Link className={styles.link} to={routes[3].route.replace(":id", movie.id)}>
+                  <MovieCard key={movie.id} movieObject={movie}></MovieCard>
+                </Link>
+              );
             })}
           </div>
         </div>

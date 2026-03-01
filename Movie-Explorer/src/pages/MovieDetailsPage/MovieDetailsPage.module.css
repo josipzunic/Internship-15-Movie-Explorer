@@ -1,0 +1,21 @@
+.imageContainer {
+    width: 20vw;
+}
+
+.image {
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    gap: 1vw;
+}
+
+.information {
+    width: 20vw;
+}
+
+.star {
+    vertical-align: middle;
+    color: gold;
+}

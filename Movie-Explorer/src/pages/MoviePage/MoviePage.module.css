@@ -19,3 +19,8 @@
   flex-wrap: wrap;
   gap: 1vw;
 }
+
+.link {
+    text-decoration: none;
+    color: black;
+}

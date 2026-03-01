@@ -8,6 +8,11 @@
     width: 10vw;
     flex: 0 0 10vw;
     cursor: pointer;
+    transition: scale 0.1s ease-in;
+}
+
+.movieCard:hover {
+    scale: 1.2;
 }
 
 .favoriteIcon {
