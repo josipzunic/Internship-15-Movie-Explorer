@@ -11,11 +11,14 @@ export const MovieCard = ({ movieObject, isFavorite }) => {
         />
       </div>
       <div className={styles.movieInfo}>
-        <h2>{movieObject.name}</h2>
-        <p>
-          {isFavorite? (
+        <h2 className={styles.title}>
+          {isFavorite ? (
             <span className={styles.favoriteIcon}>&#9733;</span>
-          ) : null}{" "}
+          ) : null}
+          {movieObject.name}
+        </h2>
+        <p className={styles.paragraph}>
+          {" "}
           {movieObject.year} | {movieObject.runtime}
         </p>
       </div>
