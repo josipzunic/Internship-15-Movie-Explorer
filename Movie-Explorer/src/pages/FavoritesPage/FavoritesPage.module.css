@@ -1,4 +1,40 @@
+.favoritesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5vw;
+  padding: 1vw;
+}
+
+.favoriteItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
 .link {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
+}
+
+.unfavoriteButton {
+  width: 100%;
+  padding: 0.3rem;
+  border-radius: 20px;
+  border: 1px solid white;
+  cursor: pointer;
+  background-color: white;
+  transition: all 0.2s;
+}
+
+.unfavoriteButton:hover {
+  background: black;
+  color: white;
+  border-color: white;
+}
+
+.emptyMessage {
+  color: white;
+  font-size: 1.2rem;
+  padding: 2rem;
 }
