@@ -1,6 +1,6 @@
 import styles from "./MovieCard.module.css";
 
-export const MovieCard = ({ movieObject }) => {
+export const MovieCard = ({ movieObject, isFavorite }) => {
   return (
     <div className={styles.movieCard}>
       <div>
@@ -13,7 +13,7 @@ export const MovieCard = ({ movieObject }) => {
       <div className={styles.movieInfo}>
         <h2>{movieObject.name}</h2>
         <p>
-          {movieObject.isFavorite ? (
+          {isFavorite? (
             <span className={styles.favoriteIcon}>&#9733;</span>
           ) : null}{" "}
           {movieObject.year} | {movieObject.runtime}

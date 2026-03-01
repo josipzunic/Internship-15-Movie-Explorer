@@ -5,7 +5,7 @@ import styles from "./MovieDetailsPage.module.css";
 import { useNavigate } from "react-router-dom";
 import { routes } from "../../constants/routes";
 
-export const MovieDetailsPage = () => {
+export const MovieDetailsPage = ({ favorites, setFavorites }) => {
   const params = useParams();
   let navigate = useNavigate();
 
@@ -19,6 +19,14 @@ export const MovieDetailsPage = () => {
   }, [movie, navigate]);
 
   if (!movie) return null;
+
+  const handleFavorite = () => {
+    if (favorites.includes(movie.id)) {
+      setFavorites(favorites.filter((id) => id !== movie.id));
+    } else {
+      setFavorites([...favorites, movie.id]);
+    }
+  };
 
   return (
     <div className={styles.container}>
@@ -34,7 +42,9 @@ export const MovieDetailsPage = () => {
       </div>
       <div className={styles.information}>
         <h2>
-          <span className={styles.star}> &#9733; </span>
+          {favorites.includes(movie.id) ? (
+            <span className={styles.star}> &#9733; </span>
+          ) : null}
           {movie.name}
         </h2>
         <p>{movie.year}</p>
@@ -46,7 +56,9 @@ export const MovieDetailsPage = () => {
           odio neque. Ipsum itaque fuga ad animi corrupti ut ducimus architecto
           repellat. Laudantium.
         </p>
-        <button>{movie.isFavorite ? "Unfavorite" : "Favorite"}</button>
+        <button onClick={handleFavorite}>
+          {favorites.includes(movie.id) ? "Unfavorite" : "Favorite"}
+        </button>
       </div>
     </div>
   );

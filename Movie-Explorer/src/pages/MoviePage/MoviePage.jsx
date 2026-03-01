@@ -12,7 +12,7 @@ import {
 import { Link } from "react-router-dom";
 import { routes } from "../../constants/routes";
 
-export const MoviePage = () => {
+export const MoviePage = ({ favorites }) => {
   const searchRef = useRef(null);
   const [movies, setMovies] = useState([]);
   const [isLoaded, setIsLoaded] = useState(false);
@@ -87,8 +87,15 @@ export const MoviePage = () => {
           <div className={styles.movieContainer}>
             {displayedMovies.map((movie) => {
               return (
-                <Link className={styles.link} to={routes[3].route.replace(":id", movie.id)}>
-                  <MovieCard key={movie.id} movieObject={movie}></MovieCard>
+                <Link
+                  key={movie.id}
+                  className={styles.link}
+                  to={routes[3].route.replace(":id", movie.id)}
+                >
+                  <MovieCard
+                    movieObject={movie}
+                    isFavorite={favorites.includes(movie.id)}
+                  ></MovieCard>
                 </Link>
               );
             })}
