@@ -4,12 +4,14 @@ import { MovieCard } from "../../components/MovieCard/MovieCard";
 import { useEffect, useMemo, useRef, useState } from "react";
 import styles from "./MoviePage.module.css";
 import { Loader } from "../../components/Loader/Loader";
+import { sortAlphabeticallyAsc, sortAlphabeticallyDesc, sortByYear } from "./sortHelper/sortHelpers";
 
 export const MoviePage = () => {
   const searchRef = useRef(null);
   const [movies, setMovies] = useState([]);
   const [isLoaded, setIsLoaded] = useState(false);
   const [searchText, setSearchText] = useState("");
+  const [sortOption, setSortOption] = useState("az");
 
   useEffect(() => {
     document.title = pageNames.movies;
@@ -27,14 +29,34 @@ export const MoviePage = () => {
   }, []);
 
   const displayedMovies = useMemo(() => {
-    return movies.filter((movie) =>
+    const filteredMovies =  movies.filter((movie) =>
       movie.name.toLowerCase().includes(searchText.toLowerCase()),
     );
-  }, [movies, searchText]);
+
+    let movieArrayToReturn = [...filteredMovies];
+
+    switch(sortOption) {
+      case "az":
+        movieArrayToReturn = sortAlphabeticallyAsc(movieArrayToReturn);
+        break;
+      case "za":
+        movieArrayToReturn = sortAlphabeticallyDesc(movieArrayToReturn);
+        break;
+      case "year":
+        movieArrayToReturn = sortByYear(movieArrayToReturn);
+        break;
+    }
+
+    return movieArrayToReturn;
+  }, [movies, searchText, sortOption]);
 
   const handleSearch = (e) => {
     const newSearchText = e.target.value;
     setSearchText(newSearchText);
+  };
+
+  const handleSort = (e) => {
+    setSortOption(e.target.value);
   };
 
   return (
@@ -50,11 +72,10 @@ export const MoviePage = () => {
               placeholder="Search movies..."
               onChange={(e) => handleSearch(e)}
             />
-            <select name="sorting" id="">
-              <option value="">A-&gt;Z</option>
-              <option value="">Z-&gt;A</option>
-              <option value="">Rating</option>
-              <option value="">Year</option>
+            <select name="sorting" onChange={(e) => handleSort(e)}>
+              <option value="az">A-Z</option>
+              <option value="za">Z-A</option>
+              <option value="year">Year</option>
             </select>
           </div>
           <div className={styles.movieContainer}>
